@@ -18,41 +18,36 @@ class FaradayClient(BaseClient):
         return response
 
     @handle_rpc_errors
-    def exchange_rate(self):
+    def exchange_rate(self, **kwargs):
         """Unlock encrypted wallet at lnd startup"""
-        return "not implemented"
-        request = faradayrpc.ExchangeRateRequest()
+        request = faradayrpc.ExchangeRateRequest(**kwargs)
         response = self._faraday_stub.ExchangeRate(request)
         return response
 
     @handle_rpc_errors
-    def node_audit(self):
+    def node_audit(self, **kwargs):
         """Unlock encrypted wallet at lnd startup"""
-        return "not implemented"
-        request = faradayrpc.NodeAuditRequest()
+        request = faradayrpc.NodeAuditRequest(**kwargs)
         response = self._faraday_stub.NodeAudit(request)
         return response
 
     @handle_rpc_errors
-    def outlier_recommendations(self):
+    def outlier_recommendations(self, **kwargs):
         """Unlock encrypted wallet at lnd startup"""
-        return "not implemented"
-        request = faradayrpc.OutlierRecommendationsRequest()
+        request = faradayrpc.OutlierRecommendationsRequest(**kwargs)
         response = self._faraday_stub.OutlierRecommendations(request)
         return response
 
     @handle_rpc_errors
-    def revenue_report(self):
+    def revenue_report(self, **kwargs):
         """Unlock encrypted wallet at lnd startup"""
-        return "not implemented"
-        request = faradayrpc.RevenueReportRequest()
+        request = faradayrpc.RevenueReportRequest(**kwargs)
         response = self._faraday_stub.RevenueReport(request)
         return response
 
     @handle_rpc_errors
-    def threshold_recommendations(self):
+    def threshold_recommendations(self, **kwargs):
         """Unlock encrypted wallet at lnd startup"""
-        return "not implemented"
-        request = faradayrpc.ThresholdRecommendationsRequest()
+        request = faradayrpc.ThresholdRecommendationsRequest(**kwargs)
         response = self._faraday_stub.ThresholdRecommendations(request)
         return response
