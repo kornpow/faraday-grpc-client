@@ -11,7 +11,7 @@ from frdgrpc import FaradayClient
 from frdgrpc.client import faradayrpc
 from protobuf_to_dict import protobuf_to_dict
 
-credential_path = Path("/home/skorn/.faraday/mainnet")
+credential_path = Path("/home/kornpow/.faraday/mainnet")
 
 mac = str(credential_path.joinpath("faraday.macaroon").absolute())
 tls = str(credential_path.joinpath("tls.cert").absolute())

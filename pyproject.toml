@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "faraday-grpc-client"
-version = "0.0.1"
+version = "0.0.2"
 description = "An rpc client for LL Faraday (Node Stats)"
 authors = ["Kornpow <test@email.com>"]
 readme = "README.md"

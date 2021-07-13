@@ -1,55 +1,17 @@
-# pool-grpc-client
-A python grpc client for Lightning Pool (Lightning Network Daemon) ⚡⚡⚡
+# faraday-grpc-client
+A python grpc client for LL Faraday (Node Stats)
 
 This is a wrapper around the default grpc interface that handles setting up credentials (including macaroons.
 
 ## Dependencies
 - Python 3.6+
 - Working LND lightning node, take note of its ip address.
-- Copy your pool.macaroon and tls.cert files from `~/.pool/mainnet` to a directoy on your machine. 
+- Copy your pool.macaroon and tls.cert files from `~/.faraday/mainnet` to a directoy on your machine. 
 
 
 ## Installation
 ```bash
-# NOT ON PYPI YET
-pip install pool-grpc-client
-```
-
-
-
-
-## Basic Usage
-The api mirrors the underlying lnd grpc api (http://api.lightning.community/) but methods will be in pep8 style. ie. `.GetInfo()` becomes `.get_info()`.
-
-```python
-from pathlib import Path
-import json
-from poolgrpc.client import PoolClient
-
-credential_path = Path("/home/skorn/.pool/mainnet/")
-
-mac = str(credential_path.joinpath("pool.macaroon").absolute())
-tls = str(credential_path.joinpath("tls.cert").absolute())
-
-pool = PoolClient(
-	macaroon_filepath=mac,
-	cert_filepath=tls
-)
-
-pool.get_info()
-
-pool.get_lsat_tokens()
-```
-
-### Specifying Macaroon/Cert files
-By default the client will attempt to lookup the `readonly.macaron` and `tls.cert` files in the mainnet directory. 
-However if you want to specify a different macaroon or different path you can pass in the filepath explicitly.
-
-```python
-lnd = LNDClient(
-    macaroon_filepath='~/.lnd/invoice.macaroon', 
-    cert_filepath='path/to/tls.cert'
-)
+pip install faraday-grpc-client
 ```
 
 ## Generating LND Proto Files
